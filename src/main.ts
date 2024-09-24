@@ -62,5 +62,12 @@ async function main() {
   // //   eq(UserTable.id, UserPreferencesTable.userId)
   // // );
   // console.log(users);
+  // update
+  // const users = await db
+  //   .update(UserTable)
+  //   .set({ name: "John Doe" })
+  //   .where(eq(UserTable.age, 30));
+  // delete
+  const users = await db.delete(UserTable).where(eq(UserTable.age, 32));
 }
 main();
